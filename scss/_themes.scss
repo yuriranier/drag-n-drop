@@ -10,7 +10,7 @@
     }
     body {
         background-image: url(/img/theme-1-bg.png);
-        background-color: $global-black;
+        background-color: rgb(74, 74, 74);
         background-blend-mode: luminosity;
         @include bg-img-positioning;
     }

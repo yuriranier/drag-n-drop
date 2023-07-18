@@ -23,7 +23,7 @@ ul {
 }
 [data-theme=theme-1] body {
   background-image: url(/img/theme-1-bg.png);
-  background-color: rgb(11, 11, 11);
+  background-color: rgb(74, 74, 74);
   background-blend-mode: luminosity;
   background-position: center;
   background-repeat: no-repeat;
