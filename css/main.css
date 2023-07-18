@@ -22,7 +22,7 @@ ul {
   text-shadow: 1px 1px 4px darkblue;
 }
 [data-theme=theme-1] body {
-  background-image: url(/img/theme-1-bg.png);
+  background-image: url("/img/theme-1-bg.png");
   background-color: rgb(74, 74, 74);
   background-blend-mode: luminosity;
   background-position: center;
@@ -77,7 +77,7 @@ ul {
   text-shadow: 2px 2px 10px rgba(255, 161, 216, 0.6);
 }
 [data-theme=theme-2] body {
-  background-image: url(/img/theme-2-bg.jpg);
+  background-image: url("/img/theme-2-bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -130,7 +130,7 @@ ul {
   text-shadow: 1px 1px 4px darkblue;
 }
 [data-theme=theme-3] body {
-  background-image: url(/img/theme-3-bg.jpg);
+  background-image: url("/img/theme-3-bg.jpg");
   background-color: rgba(206, 254, 227, 0.5);
   background-blend-mode: luminosity;
   background-position: center;

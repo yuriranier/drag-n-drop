@@ -9,7 +9,7 @@
         }
     }
     body {
-        background-image: url(/img/theme-1-bg.png);
+        background-image: url("/img/theme-1-bg.png");
         background-color: rgb(74, 74, 74);
         background-blend-mode: luminosity;
         @include bg-img-positioning;
@@ -68,7 +68,7 @@
         }
     }
     body {
-        background-image: url(/img/theme-2-bg.jpg);
+        background-image: url("/img/theme-2-bg.jpg");
         @include bg-img-positioning;
     }
 
@@ -125,7 +125,7 @@
         }
     }
     body {
-        background-image: url(/img/theme-3-bg.jpg);
+        background-image: url("/img/theme-3-bg.jpg");
         background-color: rgb(206 254 227 / 0.5);
         background-blend-mode: luminosity;
         @include bg-img-positioning;
