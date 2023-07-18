@@ -1,0 +1,174 @@
+[data-theme="theme-1"]{
+    header {
+        background: $theme-1_main-opac-2;
+        backdrop-filter: blur(4px);
+
+        .main-title{
+            color: $global-white;
+            text-shadow: 1px 1px 4px darkblue;
+        }
+    }
+    body {
+        background-image: url(/img/theme-1-bg.png);
+        background-color: $global-black;
+        background-blend-mode: luminosity;
+        @include bg-img-positioning;
+    }
+
+    .settings_user_save, .settings_user_clear {
+        cursor: pointer;
+      border: solid 2px $global-white;
+      background-color: $global-white;
+      color: $global-black;
+  
+        &:hover{
+          background-color: transparent;
+          color: $theme-1_accent;
+          border-color: $theme-1_accent;
+        }
+      }
+
+      i {
+        color: $global-white;
+        font-size: 2rem;
+    
+        &:hover {
+          color: $theme-1_accent;
+        }
+      }
+
+      input[type='radio'] {
+        accent-color: $theme-1_accent;
+      }
+
+      .drag-column {
+        @include drag-column;
+        background: $theme-1_main-opac-1;
+        backdrop-filter: blur(4px);
+    }
+
+    .drag-item {
+        background-color: $theme-1_main-opac-2;
+    }
+
+    .add-btn:hover {
+        background-color: $theme-1_accent;
+        color: $global-black;
+      }
+}
+
+[data-theme="theme-2"]{
+    header {
+        background: $theme-2_main-opac-2;
+        backdrop-filter: blur(4px);
+
+        .main-title{
+            color: $global-white;
+            text-shadow: 2px 2px 10px $theme-2_main-opac-1;
+        }
+    }
+    body {
+        background-image: url(/img/theme-2-bg.jpg);
+        @include bg-img-positioning;
+    }
+
+    .settings_user_save, .settings_user_clear {
+        cursor: pointer;
+        border: solid 2px $global-white;
+        background-color: $global-white;
+        color: $global-black;
+  
+        &:hover{
+          background-color: transparent;
+          color: $global-white;
+          border-color: $global-white;
+        }
+      }
+
+      i {
+        color: $global-white;
+        font-size: 2rem;
+    
+        &:hover {
+          color: $theme-2_accent;
+        }
+      }
+
+      input[type='radio'] {
+        accent-color: $theme-2_accent;
+      }
+
+      .drag-column {
+        @include drag-column;
+        background: $theme-2_main-opac-1;
+        backdrop-filter: blur(4px);
+    }
+
+    .drag-item {
+        background-color: $theme-2_main-opac-2;
+    }
+
+    .add-btn:hover {
+        background-color: $theme-2_accent;
+        color: $global-white;
+      }
+}
+
+[data-theme="theme-3"]{
+    header {
+        background: $theme-3_main-opac-2;
+        backdrop-filter: blur(4px);
+
+        .main-title{
+            color: $global-white;
+            text-shadow: 1px 1px 4px darkblue;
+        }
+    }
+    body {
+        background-image: url(/img/theme-3-bg.jpg);
+        background-color: rgb(206 254 227 / 0.5);
+        background-blend-mode: luminosity;
+        @include bg-img-positioning;
+    }
+
+    .settings_user_save, .settings_user_clear {
+        cursor: pointer;
+      border: solid 2px $global-white;
+      background-color: $global-white;
+      color: $global-black;
+  
+        &:hover{
+          background-color: transparent;
+          color: $theme-3_accent;
+          border-color: $theme-3_accent;
+        }
+      }
+
+      i {
+        color: $global-white;
+        font-size: 2rem;
+    
+        &:hover {
+          color: $theme-3_accent;
+        }
+      }
+
+      input[type='radio'] {
+        accent-color: $theme-3_accent;
+      }
+
+      .drag-column {
+        @include drag-column;
+        background: $theme-3_main-opac-1;
+        backdrop-filter: blur(4px);
+    }
+
+    .drag-item {
+        background-color: $theme-3_main-opac-2;
+    }
+
+    .add-btn:hover {
+        background-color: $theme-3_accent;
+        color: $global-white;
+      }
+}

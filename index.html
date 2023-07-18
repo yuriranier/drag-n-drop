@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag and Drop</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="image/png" href="/img/favicon.png" />
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="main-title" id="title"></h1>
+      <div class="settings">
+        <div class="settings_fields">
+          <fieldset class="settings_group settings_user">
+            <legend class="settings_title">Username</legend>
+            <form class="settings_user_name" id="name-form" autocomplete="off">
+              <input type="text" id="name-input" />
+              <button type="submit" id="save-btn" class="settings_user_save">
+                Save
+              </button>
+              <button type="submit" id="clear-btn" class="settings_user_clear">
+                Reset
+              </button>
+            </form>
+          </fieldset>
+
+          <fieldset class="settings_group settings_theme">
+            <legend class="settings_title">Theme</legend>
+            <input
+              type="radio"
+              id="theme-1"
+              class="theme-input"
+              name="theme"
+              value="theme-1"
+            />
+            <label for="theme-1" class="theme-label">Sleepless in NYC</label
+            ><br />
+            <input
+              type="radio"
+              id="theme-2"
+              class="theme-input"
+              name="theme"
+              value="theme-2"
+            />
+            <label for="theme-2" class="theme-label">Barbie Girl</label><br />
+            <input
+              type="radio"
+              id="theme-3"
+              class="theme-input"
+              name="theme"
+              value="theme-3"
+            />
+            <label for="theme-3" class="theme-label">Monster Mash</label><br />
+          </fieldset>
+        </div>
+        <div class="settings_btn">
+          <i class="fa-solid fa-gear"></i>
+        </div>
+      </div>
+    </header>
+
+    <div class="drag-container">
+      <ul class="drag-list">
+        <!-- Backlog Column -->
+        <li class="drag-column backlog-column">
+          <span class="header">
+            <h1>Backlog</h1>
+          </span>
+          <!-- Backlog Content -->
+          <div id="backlog-content" class="custom-scroll">
+            <ul
+              class="drag-item-list"
+              id="backlog-list"
+              ondrop="drop(event)"
+              ondragover="allowDrop(event)"
+              ondragenter="dragEnter(0)"
+            ></ul>
+          </div>
+          <!-- Add Button Group -->
+          <div class="add-btn-group">
+            <div class="add-btn" onclick="showInputBox(0)">
+              <span class="plus-sign">+</span>
+              <span>Add Item</span>
+            </div>
+            <div class="add-btn solid" onclick="hideInputBox(0)">
+              <span>Save Item</span>
+            </div>
+          </div>
+          <div class="add-container">
+            <div class="add-item" contenteditable="true"></div>
+          </div>
+        </li>
+
+        <!-- Progress Column -->
+        <li class="drag-column progress-column">
+          <span class="header">
+            <h1>Progress</h1>
+          </span>
+          <!-- Progress Content -->
+          <div id="progress-content" class="custom-scroll">
+            <ul
+              class="drag-item-list"
+              id="progress-list"
+              ondrop="drop(event)"
+              ondragover="allowDrop(event)"
+              ondragenter="dragEnter(1)"
+            ></ul>
+          </div>
+          <!-- Add Button Group -->
+          <div class="add-btn-group">
+            <div class="add-btn" onclick="showInputBox(1)">
+              <span class="plus-sign">+</span>
+              <span>Add Item</span>
+            </div>
+            <div class="add-btn solid" onclick="hideInputBox(1)">
+              <span>Save Item</span>
+            </div>
+          </div>
+          <div class="add-container">
+            <div class="add-item" contenteditable="true"></div>
+          </div>
+        </li>
+
+        <!-- Complete Column -->
+        <li class="drag-column complete-column">
+          <span class="header">
+            <h1>Complete</h1>
+          </span>
+          <!-- Complete Content -->
+          <div id="complete-content" class="custom-scroll">
+            <ul
+              class="drag-item-list"
+              id="complete-list"
+              ondrop="drop(event)"
+              ondragover="allowDrop(event)"
+              ondragenter="dragEnter(2)"
+            ></ul>
+          </div>
+          <!-- Add Button Group -->
+          <div class="add-btn-group">
+            <div class="add-btn" onclick="showInputBox(2)">
+              <span class="plus-sign">+</span>
+              <span>Add Item</span>
+            </div>
+            <div class="add-btn solid" onclick="hideInputBox(2)">
+              <span>Save Item</span>
+            </div>
+          </div>
+          <div class="add-container">
+            <div class="add-item" contenteditable="true"></div>
+          </div>
+        </li>
+
+        <!-- On-hold Column -->
+        <li class="drag-column on-hold-column">
+          <span class="header">
+            <h1>On-hold</h1>
+          </span>
+          <!-- On-hold Content -->
+          <div id="on-hold-content" class="custom-scroll">
+            <ul
+              class="drag-item-list"
+              id="on-hold-list"
+              ondrop="drop(event)"
+              ondragover="allowDrop(event)"
+              ondragenter="dragEnter(3)"
+            ></ul>
+          </div>
+          <!-- Add Button Group -->
+          <div class="add-btn-group">
+            <div class="add-btn" onclick="showInputBox(3)">
+              <span class="plus-sign">+</span>
+              <span>Add Item</span>
+            </div>
+            <div class="add-btn solid" onclick="hideInputBox(3)">
+              <span>Save Item</span>
+            </div>
+          </div>
+          <div class="add-container">
+            <div class="add-item" contenteditable="true"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- Script -->
+    <script src="/js/main.js"></script>
+  </body>
+</html>

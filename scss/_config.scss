@@ -1,0 +1,62 @@
+// Google Fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap'), url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+// Resets
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+// Global Variables
+
+$global-white: whitesmoke;
+$global-black: rgb(11 11 11);;
+$title-font: 'Major Mono Display', monospace;
+$body-font: 'Quicksand', sans-serif;
+
+// Theme 1 Variables
+
+$theme-1_main-opac-1: rgb(11 11 11 / 0.4);
+$theme-1_main-opac-2: rgb(11 11 11 / 0.9);
+$theme-1_accent: #9FCC2E;
+
+// Theme 2 Variables
+
+$theme-2_main-opac-1: rgb(255 161 216 / 0.6);
+$theme-2_main-opac-2: rgba(231, 13, 111, 0.5);
+$theme-2_accent: rgb(250, 136, 187);
+
+// Theme 3 Variables
+
+$theme-3_main-opac-1: rgba(11, 11, 11, 0.4);
+$theme-3_main-opac-2: rgba(255, 129, 26, 0.7);
+$theme-3_accent: #27003a;
+
+
+//  Mixins
+
+@mixin transition-ease {
+    transition: all 0.5s ease-in-out;
+}
+
+@mixin bg-img-positioning {
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin drag-column {
+    flex: 1;
+        position: relative;
+        border-radius: 10px;
+        overflow-x: hidden;
+}
